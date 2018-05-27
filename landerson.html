@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<html>
+<head>
+<script>
+/*input: Beginning Odometer Reading, Ending Odemeter Reading, Gallons of Gasoline Used.
+*processing: Calculate Gas Milage by subtracting beginning reading from ending reading, then
+* divide result by gallons used.
+*output: Miles Per Gallon
+*/
+function mpgcalc() {
+// Read Beginning, Ending Odometer Readings and Gas Used from user.
+var bor = parseFloat(document.getElementById('borinputbox').value)
+var eor = parseFloat(document.getElementById('eorinputbox').value)
+var gu = parseFloat(document.getElementById('guinputbox').value)
+
+// Calculate miles driven
+var miles = eor - bor
+
+// Calculate miles per gallon
+var mpg = miles / gu
+
+// Output MPG
+document.getElementById('mpgDiv').innerHTML = mpg;
+}
+</script>
+</head>
+<body>
+Please enter ... <br>
+Beginning Odometer Miles <input type="text" id ="borinputbox"><br>
+Ending Odometer Miles <input type="text" id ="eorinputbox"><br>
+Gallons of Gasoline Used <input type="text" id ="guinputbox"><br>
+<button type="botton" onclick="mpgcalc()">Calculate Miles Per Gallon</button>
+<div id="mpgDiv"></div>
+</body>
+</html>
+
