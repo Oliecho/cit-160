@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>What foot wear should I wear</title>
+<script>
+/* Defining Table
+* Input: The weather
+* Processing: Calculate what foot wear should be worn
+* Output: Display the foot wear that should be worn
+*/
+function footWear() {
+
+//Gets the users input for the weather
+var weather = document.getElementById('weatherInputBox').value;
+var footWear;
+
+//Calculates what foot wear should be worn
+if (weather === 'hot') {
+footWear = "sandals";
+}
+else if (weather ==='rain') {
+footWear = "galoshes";
+}
+else if (weather === 'snow') {
+footWear = "boots";
+}
+else {
+footWear = "shoes";
+}
+
+//Outputs what foot wear should be worn
+document.getElementById('outputDiv').innerHTML = footWear;
+}
+</script>
+</head>
+
+<body>
+What is the weather today: <input type="text" id="weatherInputBox">
+<button type="button" onclick="footWear()">Foot Wear</button>
+<div id="outputDiv"></div> 
+</body>
+</html>

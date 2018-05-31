@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Math</title>
+<script>
+/* Defining Table
+* Input: User inputs the first two numbers and what operator is being used along with the answer.
+* Processing: Determine if the answer is correct or incorrect. 
+* Output: Display the proper message based off of the answer
+*/
+function math() {
+
+//user inputs the math equation 
+var firstNumber = parseFloat(document.getElementById('firstNumberInputBox').value);
+var operator = document.getElementById('operatorInputBox').value;
+var secondNumber = parseFloat(document.getElementById('secondNumberInputBox').value);
+var answer = parseFloat(document.getElementById('answerInputBox').value);
+
+var correctMath;
+
+var checkAnswer;
+
+//determine what operator is being used
+//determine if the answer is correct or incorrect
+switch (operator) {
+case '+':
+correctMath = firstNumber + secondNumber;
+break;
+case '-':
+correctMath = firstNumber - secondNumber;
+break;
+case '*':
+correctMath = firstNumber * secondNumber;
+break;
+case '/':
+correctMath = firstNumber / secondNumber;
+break;
+}
+
+if (answer === correctMath){
+checkAnswer = "Correct!Good job."
+}
+else {
+checkAnswer = "Incorrect. Try again!"
+}
+
+//display the proper message based on the answer
+document.getElementById('outputDiv').innerHTML = checkAnswer;
+}
+</script>
+</head>
+
+<body>
+<input type="text" id="firstNumberInputBox">
+<input type="text" id="operatorInputBox">
+<input type="text" id="secondNumberInputBox">
+= <input type="text" id="answerInputBox">
+<button type="button" onclick="math()">Is this correct?</button>
+<div id="outputDiv"></div> 
+</body>
+</html>

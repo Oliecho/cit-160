@@ -1,0 +1,8 @@
+﻿This week, I learned about variables, how to manipulate them, and how to do arithmetic in JavaScript. I learned about the order of operations, and how to assign variables after declaring them.
+
+Variables can be one of the following types: Boolean, number, string, function, or object. This week we used numbers, strings, and functions. Numbers are integers or floating point, and they can be used in arithmetic. Strings are arbitrary strings of characters, and can be concatenated. Functions are blocks of code that can be triggered from elsewhere in the JavaScript or HTML.
+
+I also learned how to do desk checks this week. Desk checks are a step by step run through a piece of code, while making a table of the variables used over time in order to find if the code works correctly and as expected.
+
+This week, the peer review I received was much more constructive than last week’s. My classmate actually ran my code, and complimented me on how it worked perfectly. 
+
