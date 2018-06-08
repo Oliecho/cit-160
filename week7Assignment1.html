@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Complete Your Order</title>
+<script>
+/* Input: User's subtotal.
+ * Processing: Determine if today's Tuesday or Wednesday, and give a 10% discount if is. Then add a 6% sales tax.
+ * Output: User's total after discounts and taxes.
+ */
+function computeDiscount() {
+    //Initialize variables
+    var total;
+    var discount;
+    var subTotal = parseFloat(document.getElementById('subTotalBox').value);
+    //Get day of week
+    var dayOfWeek = new Date().getDay();
+    //See if today is Tuesday
+    if (dayOfWeek == 2 || dayOfWeek == 3) {
+        //Discount is 10% on Tuesdays and Wednesdays
+        discount = .9;
+    } else {
+        discount = 1;
+    }
+    //Compute final total
+    total = subTotal * discount * 1.06
+    //Output to div
+    document.getElementById('output').innerHTML = total;
+}
+</script>
+</head>
+
+<body>
+Please enter your subtotal to see your total after discounts and taxes: $<input type="text" id="subTotalBox" size="3"><br>  
+<button type="button" onclick="computeDiscount()">Get Total</button>  
+<div id="output"></div>  
+</body>
+</html>
