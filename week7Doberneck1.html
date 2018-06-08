@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Reatil store sales</title>
+<script type="text/javascript">
+
+function total()
+{
+//This will bring the value from the subtotalbox.
+var subtotal = parseFloat(document.getElementById("subtotalBox").value);
+//this code will determine the day of week where 0=Sunday 1=Monday, etc
+var dayofWeek = new Date().getDay();
+
+/*This will calculate if everything falls in the value to get a discount on tuesday or
+* or wednesday
+*/
+if ((subtotal > 50) && (dayofWeek == 2 || dayofWeek == 3)) {
+amount = subtotal - (subtotal * 0.1);
+} else {
+amount = subtotal;
+} 
+
+//This will add the sales tax to the total
+amount *= 1.06;
+
+//This will round the number to two decimal points.
+var digits = 2;
+var multiplier = Math.pow(10, digits);
+amount = Math.round(amount * multiplier) / multiplier;
+
+//This displays the total in th outputDiv
+document.getElementById("outputDiv").innerHTML = amount;
+
+}
+
+</script>
+</head>
+<body>
+<p>Please enter customer's subtotal</p>
+<input type="text" id="subtotalBox">
+<button type="button" onclick="total()">Click</button>
+<div id="outputDiv"></div>
+
+</body>
+</html>
