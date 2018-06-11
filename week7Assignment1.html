@@ -16,7 +16,7 @@ function computeDiscount() {
     //Get day of week
     var dayOfWeek = new Date().getDay();
     //See if today is Tuesday
-    if (dayOfWeek == 2 || dayOfWeek == 3) {
+    if (subTotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
         //Discount is 10% on Tuesdays and Wednesdays
         discount = .9;
     } else {
