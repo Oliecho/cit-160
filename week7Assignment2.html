@@ -3,17 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Can I Sleep In?</title>
-
-</head>
-
-<body>
-<h1>See Below if You Can Sleep in Today</h1><br> 
-<div id="output"></div>
 <script>
     /* Input: Date information from the user's computer.
     * Processing: See if the user can sleep in today based on the user's date information.
     * Output: "Sleep in." If it is a weekend or a holiday. "Wake up!" if it is a weekday that is not a holiday.
     */
+    function canSleep() {
     //Initialize variables
     var now = new Date();
     var month = now.getMonth();
@@ -26,7 +21,15 @@
     }
     //Output to div
     document.getElementById('output').innerHTML = sleep;
+    }
 </script>
+</head>
+
+<body>
+<h1>See Below if You Can Sleep in Today</h1><br>
+<button type="button" onclick="canSleep()">Check</button>
+<div id="output"></div>
+
   
 </body>
 </html>
