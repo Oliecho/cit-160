@@ -16,14 +16,18 @@ function doFV() {
     document.getElementById('outputDiv').innerHTML = result ;
 }
 function computeFutureValue(principal, annualRate, years, periodsPerYear) {
-
+    return f;
 }
 </script>
 </head>
 
+<h1>Investment Calculator</h1><br>
 <body>
-<p>input</p><br> 
-<button type="button" onclick="">Click</button>  
+Amount invested (principal) <input type="text" id="principalInputBox"><br>
+Annual rate (example: .08) <input type="text" id="annualRateInputBox"><br>
+Number of years <input type="text" id="yearsInputBox"><br>
+Periods per year <input type="text" id="periodsPerYearInputBox"><br>
+<button type="button" onclick="doFV()">Compute future value</button>  
 <div id="outputDiv"></div>  
 </body>
 </html>
