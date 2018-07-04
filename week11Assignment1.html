@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Title</title>
+<title>Investment Calculator</title>
 
 <script>
 /* Input: Amount invested, annual interest rate, number of years, and periods per year.
@@ -10,12 +10,20 @@
  * Output: Future value of the in vestment.
  */
 function doFV() {
-
+    //get input from user and define variables.
+    var principal = parseFloat(document.getElementById('principalInputBox').value);
+    var annualRate = parseFloat(document.getElementById('annualRateInputBox').value);
+    var years = parseFloat(document.getElementById('yearsInputBox').value);
+    var periodsPerYear = parseFloat(document.getElementById('periodsPerYearInputBox').value);
 
     // Determine the output and show it to the user.
+    var result = computeFutureValue(principal, annualRate, years, periodsPerYear);
     document.getElementById('outputDiv').innerHTML = result ;
 }
 function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+    var growthRatePerPeriod = annualRate / periodsPerYear;
+    var periods = years * periodsPerYear;
+    var f = principal * Math.pow(1 + growthRatePerPeriod, periods);
     return f;
 }
 </script>
