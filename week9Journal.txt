@@ -1,0 +1,9 @@
+﻿This week, we wrote two programs and reviewed last week's textbook chapter. The textbook chapter was about Repetition. One thing it mentions is that for loops don't execute from left to right and top to bottom. A "for" loop processes the first 2 statements in the parentheses first, then the code block, then the last statement. The first statement in the parentheses is only run once.
+
+The first program calculated and displayed the 5 times table using a counting loop that concatenated a string of each of the 5 times tables from 1 to 12 together with line breaks and outputted them to a div.
+
+The second program also used a counting loop to calculate and concatenate all of the powers of 2 from 2^0 to 2^31 together with line breaks
+
+We had an instructor thoughts activity in which we learned about some common problems and challenges and also got some good encouragement from Bro. Simpson and from my peers.
+
+As far as peer review of my code, I didn't get any peer review this week.

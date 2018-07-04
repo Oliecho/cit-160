@@ -1,0 +1,9 @@
+﻿This week, I learned how to write functions in JavaScript. Functions are like mini-programs that allow code to be reused quite easily. Any task that needs to be done often can be written into a function to be reused as often as needed throughout the program. To declare a function, the form "function nameHere(param1, param2,... paramN) {}" is used. The statements placed in the french brackets are run whenever the function is called. A function is called by using this form:"nameHere(arg1, arg2, ... argN);". A function can be used, for example, to retrieve input from the user, or to contain a commonly used equation.
+
+This week, I got peer review from Robertjames Rodriguez, who commented that my code looks good and seems to work fine.
+
+In conclusion, I thoroughly enjoyed this week's content. I look forward to the rest of the course!
+
+Have a great week!
+
+~Thomas Ryan Parker

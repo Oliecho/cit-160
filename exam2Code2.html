@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Divisible</title>
+<script>
+/* Input: 3 numbers: a starting number, an ending number, and a divisor
+ * Processing: find all the numbers between start and end inclusive that are evenly divisible by divisor.
+ * Output: All numbers evenly divisible between the two start and end numbers.
+ */
+function divisible() {
+var start = parseInt(document.getElementById('start').value);
+var end = parseInt(document.getElementById('end').value);
+var divisor = parseInt(document.getElementById('divisor').value);
+var counter = start;
+var output = "";
+
+while (counter <= end) {
+    if ((counter % divisor) == 0) {
+        output = output + counter  + " "
+    }
+    counter++
+}
+document.getElementById('output').innerHTML = output ;
+}
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="divisible()">Click</button>
+<div id="output"></div>
+</body>
+</html>

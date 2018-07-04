@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Exponentials of 2</title>
+
+<script type="text/javascript">
+
+function calculate() {
+var myoutput= "";
+var myfact = 2;
+var prVar = '0';
+for(prVar = 0; prVar <=31; prVar++) {
+myoutput += Math.pow(myfact, prVar)+ ', ';
+}
+document.getElementById('displayDiv').innerHTML = myoutput;
+}
+</script>
+</head>
+<body>
+<h1> Two to the power of </h1>
+Press the button to see the exponential factors of 2
+<button type="button" onclick="calculate()"> exponential </button>
+<p></P>
+<div id="displayDiv"></div>
+
+</body>
+</html>
