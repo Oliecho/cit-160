@@ -2,40 +2,60 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Title</title>
+<title>Loan Calculator</title>
 
 <script>
-/* Input: Amount invested, annual interest rate, number of years, and periods per year.
- * Processing: Compute future value of the amount invester after the user defined number of years. 
- * Output: Future value of the in vestment.
+/* Input: Amount Borrowed, Annual Interest rate, Mumber of years, Payments per year, number of payments paid
+ * Processing: 
+ * Output: 
  */
-function doFV() {
-    //get inpur from user and define variables.
+function doPayment() {
+    //get input from user and define variables.
     var principal = parseFloat(document.getElementById('principalInputBox').value);
     var annualRate = parseFloat(document.getElementById('annualRateInputBox').value);
     var years = parseFloat(document.getElementById('yearsInputBox').value);
     var periodsPerYear = parseFloat(document.getElementById('periodsPerYearInputBox').value);
 
     // Determine the output and show it to the user.
-    var result = computeFutureValue(principal, annualRate, years, periodsPerYear);
-    document.getElementById('outputDiv').innerHTML = result ;
+    var result = computePayment(principal, annualRate, years, periodsPerYear);
+    document.getElementById('outputPayment').innerHTML = result ;
 }
-function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+
+function doBalance() {
+    //get input from user and define variables.
+    var principal = parseFloat(document.getElementById('principalInputBox').value);
+    var annualRate = parseFloat(document.getElementById('annualRateInputBox').value);
+    var years = parseFloat(document.getElementById('yearsInputBox').value);
+    var periodsPerYear = parseFloat(document.getElementById('periodsPerYearInputBox').value);
+    var numberOfPaymentsPaidToDate = parseFloat(document.getElementById('numberOfPaymentsPaidToDateInputBox').value);
+
+    var result = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
+    document.getElementById('outputBalance').innerHTML = result ;
+}
+
+function computePayment(principal, annualRate, years, periodsPerYear) {
     var growthRatePerPeriod = annualRate / periodsPerYear;
     var periods = years * periodsPerYear;
     var f = principal * Math.pow(1 + growthRatePerPeriod, periods);
     return f;
 }
+
+function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
+
+}
 </script>
 </head>
 
-<h1>Investment Calculator</h1><br>
 <body>
-Amount invested (principal) <input type="text" id="principalInputBox"><br>
-Annual rate (example: .08) <input type="text" id="annualRateInputBox"><br>
+<h1>Loan Calculator</h1><br>
+Amount borrowed (principal) <input type="text" id="principalInputBox"><br>
+Annual interest rate (example: .08) <input type="text" id="annualRateInputBox"><br>
 Number of years <input type="text" id="yearsInputBox"><br>
 Periods per year <input type="text" id="periodsPerYearInputBox"><br>
-<button type="button" onclick="doFV()">Compute future value</button>  
-<div id="outputDiv"></div>  
+<button type="button" onclick="doPayment()">Compute payment</button>  
+<div id="outputPayment"></div><br>
+Number of payments paid to date <input type="text" id="numberOfPaymentsPaidToDateInputBox"><br>
+<button type="button" onclick="doBalance()">Compute payoff amount</button>
+<div id="outputBalance"></div>
 </body>
 </html>
