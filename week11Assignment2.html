@@ -34,13 +34,21 @@ function doBalance() {
 }
 
 function computePayment(principal, annualRate, years, periodsPerYear) {
-    var growthRatePerPeriod = annualRate / periodsPerYear;
+    var interestRatePerPeriod = annualRate / periodsPerYear;
     var periods = years * periodsPerYear;
-    var f = principal * Math.pow(1 + growthRatePerPeriod, periods);
-    return f;
+    var numerator = principal * interestRatePerPeriod;
+    var denomenatorParenthesis = 1 + interestRatePerPeriod;
+    var denomenator = 1 - Math.pow(denomenatorParenthesis, -periods);
+    var p = numerator / denomenator;
+//    var p = (principal * interestRatePerPeriod) / (1 - Math.pow(1 + interestRatePerPeriod, periods));
+    return p;
 }
 
 function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
+    var paymentPerPeriod = computePayment(principal, annualRate, years, periodsPerYear);
+    var interestRatePerPeriod = annualRate / periodsPerYear;
+    var b = principal * Math.pow(1 + interestRatePerPeriod, numberOfPaymentsPaidToDate) - ((Math.pow(1 + interestRatePerPeriod, numberOfPaymentsPaidToDate) - 1) / interestRatePerPeriod);
+    return b;
 
 }
 </script>
