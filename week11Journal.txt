@@ -1,0 +1,5 @@
+﻿This week, we learned more about JavaScript functions by writing two more programs with them. The first program was a program for calculating potential earnings of an investment that makes compound interest. It had two functions. The first one gathered the input from the user, passed it to the second function, and output the result to a <div> tag. The second one took the input that the first function collected, and processed it using a standard formula to determine the potential value of the investment. It then passed the result back to the first function, which output the result to a <div>.
+
+This week I didn't receive any peer review, but I know from my final submission result that I must have made a minor error in my math. I hope to figure out what I have incorrect soon so that I can learn the solution.
+
+The tips posted this week have been quite helpful, thank you!
