@@ -1,0 +1,5 @@
+﻿This week I learned about arrays in JavaScript. An array is basically a list or table that can store multiple values. The elements in an array can be any type of variable, but often they are strings or numbers. Each element has an index starting at 0, and going up to the number of elements minus one. An element in an array can be accessed using this form "arrayName[n]" where "n" is the index number.
+
+Arrays are often processed by using loops. A loop can perform an action to each item in an array simply by adding one to the index each time the loop repeats, and having the loop end when the increment variable equals the length of the array (since the index numbers stop at length minus one).
+
+This week I got peer review feedback from two of my classmates. One of them did not take the time to read my code, and so was confused at how it ran when he tested it (I explained my debugging html in comments in my code). The second classmate appreciated my simple solution to the problem of finding the first and last elements in an array.
