@@ -1,0 +1,33 @@
+<html>
+<head><script>
+function makeLocation(city, state, zipcode) {
+    var location = city + ", " + state + " " + zipcode;
+    return location;
+}
+
+function getLast(list) {
+    return list[list.length - 1];
+}
+
+function twentyOne(hand) {
+    var total = 0;
+    for (i = 0; i < hand.length; i++) {
+        total += hand[i]
+    }
+    if(total > 21) {
+        return "bust";
+    } else {
+        return total;
+    }
+}
+
+function coneVolume(radius, height) {
+    var v = (Math.PI * Math.pow(radius, 2) * height) / 3
+    return v;
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

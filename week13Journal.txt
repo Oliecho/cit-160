@@ -1,0 +1,9 @@
+﻿This week we reviewed the same chapter as last week: "Chapter 10: Arrays". Then we wrote 2 programs using arrays.
+The first program used a for loop to go through each of the elements of an array, determined which elements were even numbers, and counted how may of them were even. It then returned the number of even elements in the array.
+The second one also used a for loop, but his time to multiply each element by a supplied multiplier. Resulting in another array that had the same number of elements, but each element is now multiplied by the multiplier.
+
+This week, the one person who reviewed my code wasn't able to figure out how to comment out the function not being tested in order to test my code.
+
+This course has been quite an enjoyable introduction to programming. I especially appreciate that it uses JavaScript, which is a very portable, applicable language. I think it would be fun if future versions of this curriculum used the <canvas> element of HTML5 to make the examples more visual.
+
+Thank you for your help and support!
